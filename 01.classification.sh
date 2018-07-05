@@ -12,10 +12,10 @@ DATASET="15Scene-Prod-0"
 #DATASET="Flowers-Prod-1"
 
 # Set the frequency threshold you want to test
-for iFreq in 50
+for iFreq in 60
 do
   # Loop to process all folds
-  for iFold in 0
+  for iFold in 0 1 2 3 
   do
     # Loop to process all vocabulary size
     for iWords in 100 #1000 2000 4000
@@ -62,7 +62,7 @@ do
       # If pattern file does not exit process mining
       if ! [[ -e $PAT_FILE ]]
       then
-        echo "./bin/grima2DWRAcc -T $TIMEOUT -f $iFreq -P $NBPAT_LIM_COUNT -o $OUT $TRAIN_FILE"
+        echo "~/thesis_alg_src/hologram2D/bin/hologram2D -T $TIMEOUT -f $iFreq -P $NBPAT_LIM_COUNT -o $OUT $TRAIN_FILE"
         time /home/tm08317s/thesis_alg_src/hologram2D/bin/hologram2D -T $TIMEOUT -f $iFreq -P $NBPAT_LIM_COUNT -o $OUT $TRAIN_FILE
       fi
 
