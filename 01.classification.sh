@@ -12,7 +12,7 @@ DATASET="15Scene-Prod-0"
 #DATASET="Flowers-Prod-1"
 
 # Set the frequency threshold you want to test
-for iFreq in 60
+for iFreq in 50
 do
   # Loop to process all folds
   for iFold in 0
