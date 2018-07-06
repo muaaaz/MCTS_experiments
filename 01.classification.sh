@@ -2,7 +2,7 @@
 
 SCRIPT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-TIMEOUT=1
+TIMEOUT=10
 TIME_LIM=0
 NBPAT_LIM_COUNT=100000000
 NBPAT_LIM_COUNT_MATLAB=250000
@@ -15,7 +15,7 @@ DATASET="15Scene-Prod-0"
 for iFreq in 60
 do
   # Loop to process all folds
-  for iFold in 0 1 2 3 
+  for iFold in 0 1 2 3 4 5 6 7 8 9 
   do
     # Loop to process all vocabulary size
     for iWords in 100 #1000 2000 4000
