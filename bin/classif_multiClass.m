@@ -15,7 +15,7 @@ currDir = strrep(mfilename('fullpath'),'classif_multiClass','');
 addpath( currDir );
 addpath( genpath( strcat( currDir , 'libsvm') ) ) ;
 
-pkg install -forge io
+%pkg install -forge io;
 pkg load io;
 
 printf( 'Process Classification.\n'); fflush(stdout);
